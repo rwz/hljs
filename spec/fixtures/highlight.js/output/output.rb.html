@@ -1,0 +1,21 @@
+<span class="class"><span class="keyword">class</span> <span class="title">A</span> <span class="inheritance">&lt; <span class="parent">B</span></span>;</span> <span class="function"><span class="keyword">def</span> <span class="title"><span class="keyword">self</span></span>.<span class="title">create</span><span class="params">(object = <span class="constant">User</span>)</span> </span>object <span class="keyword">end</span> <span class="keyword">end</span>
+<span class="class"><span class="keyword">class</span> <span class="title">Zebra</span>;</span> <span class="function"><span class="keyword">def</span> <span class="title">inspect</span>;</span> <span class="string">"X<span class="subst">#{<span class="number">2</span> + <span class="keyword">self</span>.object_id}</span>"</span> <span class="keyword">end</span> <span class="keyword">end</span>
+
+<span class="class"><span class="keyword">module</span> <span class="title">ABC::DEF</span></span>
+  <span class="keyword">include</span> <span class="constant">Comparable</span>
+
+  <span class="comment"># <span class="yardoctag">@param</span> test</span>
+  <span class="comment"># <span class="yardoctag">@return</span> [String] nothing</span>
+  <span class="function"><span class="keyword">def</span> <span class="title">foo</span><span class="params">(test)</span></span>
+    <span class="constant">Thread</span>.new <span class="keyword">do</span> |blockvar|
+      <span class="constant">ABC::DEF</span>.reverse(<span class="symbol">:a_symbol</span>, <span class="symbol">:<span class="string">'a symbol'</span></span>, <span class="symbol">:&lt;=&gt;</span>, <span class="string">'test'</span> + test)
+    <span class="keyword">end</span>.join
+  <span class="keyword">end</span>
+
+  <span class="function"><span class="keyword">def</span> <span class="title">[]</span><span class="params">(index)</span> </span><span class="keyword">self</span>[index] <span class="keyword">end</span>
+  <span class="function"><span class="keyword">def</span> <span class="title">==</span><span class="params">(other)</span> </span>other == <span class="keyword">self</span> <span class="keyword">end</span>
+<span class="keyword">end</span>
+
+anIdentifier = an_identifier
+<span class="constant">Constant</span> = <span class="number">1</span>
+render <span class="symbol">action:</span> <span class="symbol">:new</span>

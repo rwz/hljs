@@ -1,5 +1,18 @@
 require "hljs/version"
+require "forwardable"
 
-module Hljs
-  # Your code goes here...
+module HLJS
+  class UnsupportedSyntaxError < SyntaxError; end
+
+  extend Forwardable
+  def_delegators :adapter, :highlight, :supported_syntaxes
+
+  def adapter
+    @adapter ||= begin
+      require "hljs/adapters/highlight_js"
+      Adapters::HighlightJS.new
+    end
+  end
+
+  module_function :adapter, :highlight, :supported_syntaxes
 end

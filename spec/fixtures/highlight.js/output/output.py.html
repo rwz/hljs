@@ -1,0 +1,12 @@
+<span class="decorator">@requires_authorization</span>
+<span class="function"><span class="keyword">def</span> <span class="title">somefunc</span><span class="params">(param1=<span class="string">''</span>, param2=<span class="number">0</span>)</span>:</span>
+    <span class="string">r'''A docstring'''</span>
+    <span class="keyword">if</span> param1 &gt; param2: <span class="comment"># interesting</span>
+        <span class="keyword">print</span> <span class="string">'Gre\'ater'</span>
+    <span class="keyword">return</span> (param2 - param1 + <span class="number">1</span>) <span class="keyword">or</span> <span class="built_in">None</span>
+
+<span class="class"><span class="keyword">class</span> <span class="title">SomeClass</span>:</span>
+    <span class="keyword">pass</span>
+
+<span class="prompt">&gt;&gt;&gt; </span>message = <span class="string">'''interpreter
+<span class="prompt">... </span>prompt'''</span>

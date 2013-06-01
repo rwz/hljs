@@ -1,4 +1,7 @@
 source 'https://rubygems.org'
 
-# Specify your gem's dependencies in hljs.gemspec
 gemspec
+
+gem 'rake'
+gem 'json',  '~> 1.8'
+gem 'rspec', '~> 2.14.0.rc1'

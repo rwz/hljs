@@ -1,3 +1,3 @@
-module Hljs
-  VERSION = "0.0.1"
+module HLJS
+  VERSION = "0.1.0".freeze
 end

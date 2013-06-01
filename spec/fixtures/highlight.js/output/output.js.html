@@ -1,0 +1,16 @@
+<span class="function"><span class="keyword">function</span> <span class="title">$initHighlight</span><span class="params">(block, flags)</span> {</span>
+  <span class="keyword">try</span> {
+    <span class="keyword">if</span> (block.className.search(<span class="regexp">/\bno\-highlight\b/</span>) != -<span class="number">1</span>)
+      <span class="keyword">return</span> processBlock(block, <span class="literal">true</span>, <span class="number">0x0F</span>) + <span class="string">' class=""'</span>;
+  } <span class="keyword">catch</span> (e) {
+    <span class="comment">/* handle exception */</span>
+
+    <span class="keyword">var</span> e4x =
+        <span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span>Example
+            <span class="tag">&lt;<span class="title">p</span>&gt;</span>1234<span class="tag">&lt;/<span class="title">p</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span>;</span>
+  }
+  <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span> / <span class="number">2</span>; i &lt; classes.length; i++) { <span class="comment">// "0 / 2" should not be parsed as regexp</span>
+    <span class="keyword">if</span> (checkCondition(classes[i]) === <span class="literal">undefined</span>)
+      <span class="keyword">return</span> <span class="regexp">/\d+/g</span>;
+  }
+}

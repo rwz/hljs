@@ -5,11 +5,11 @@ require 'hljs/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "hljs"
-  spec.version       = Hljs::VERSION
+  spec.version       = HLJS::VERSION
   spec.authors       = ["Pavel Pravosud"]
   spec.email         = ["pavel@pravosud.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.description   = %q{Ruby wrapper for javascript code highlighting libraries}
+  spec.summary       = %q{Allows to use javascript code highlighters from ruby}
   spec.homepage      = ""
   spec.license       = "MIT"
 
@@ -18,6 +18,6 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
+  spec.add_dependency             "execjs",  "~> 1.4"
   spec.add_development_dependency "bundler", "~> 1.3"
-  spec.add_development_dependency "rake"
 end
