@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["pavel@pravosud.com"]
   spec.description   = %q{Ruby wrapper for javascript code highlighting libraries}
   spec.summary       = %q{Allows to use javascript code highlighters from ruby}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/rwz/hljs"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
