@@ -1,6 +1,9 @@
-# Hljs
+# HLJS
 
-TODO: Write a gem description
+HLJS allows to use javascript code highlighting libraries from ruby. Cool, huh?
+It's cooler than Pygments-based solution because it doesn't need python. It's cooler
+than client-side highlighting because... I have no idea why, actually.
+But anyways.
 
 ## Installation
 
@@ -18,7 +21,12 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+For now only highlight.js adapter is supported.
+
+```ruby
+HLJS.highlight source, language # => highlighted source
+HLJS.supported_syntaxes         # => the list of all supported syntaxes
+```
 
 ## Contributing
 
