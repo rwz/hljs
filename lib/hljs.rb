@@ -10,7 +10,7 @@ module HLJS
   def adapter
     @adapter ||= begin
       require "hljs/adapters/highlight_js"
-      Adapters::HighlightJS.new
+      Adapters::HighlightJS.instance
     end
   end
 

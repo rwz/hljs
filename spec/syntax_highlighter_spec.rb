@@ -3,6 +3,8 @@ require "shared_examples_for_adapter"
 require "hljs/adapters/syntax_highlighter"
 
 describe HLJS::Adapters::SyntaxHighlighter do
+  subject{ described_class.instance }
+
   it_behaves_like "an adapter"
 
   assert_highlighted "SyntaxHighlighter", "html.xml",      "Xml"

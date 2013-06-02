@@ -3,6 +3,8 @@ require "shared_examples_for_adapter"
 require "hljs/adapters/highlight_js"
 
 describe HLJS::Adapters::HighlightJS do
+  subject{ described_class.instance }
+
   it_behaves_like "an adapter"
 
   assert_highlighted "highlight.js", "html.xml",      "xml"

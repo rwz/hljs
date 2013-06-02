@@ -1,7 +1,9 @@
 require "execjs"
+require "singleton"
 
 module HLJS
   class Adapter
+    include Singleton
 
     def inspect
       additions = "Version #{version}, #{supported_syntaxes.count} syntaxes supported"
