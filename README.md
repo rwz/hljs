@@ -21,11 +21,21 @@ Or install it yourself as:
 
 ## Usage
 
-For now only highlight.js adapter is supported.
+For now only two adapters are supported: [highlight.js](https://github.com/isagalaev/highlight.js)
+and [SyntaxHighlighter](https://github.com/alexgorbatchev/SyntaxHighlighter).
 
 ```ruby
 HLJS.highlight source, language # => highlighted source
 HLJS.supported_syntaxes         # => the list of all supported syntaxes
+```
+
+Swithing adapters is quite straightforward:
+
+```ruby
+>> HLJS.adapter = :highlightjs
+=> #<HLJS::Adapters::HighlightJS:0x007ffb5a0a0a48 Version 7.3, 54 syntaxes supported>
+>> HLJS.adapter = :syntaxhighlighter
+=> #<HLJS::Adapters::SyntaxHighlighter:0x007fb35448a990 Version 3.0.83, 25 syntaxes supported>
 ```
 
 ## Contributing
