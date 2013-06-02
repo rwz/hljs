@@ -9,6 +9,12 @@ describe HLJS::Adapters::HighlightJS do
 
   its(:inspect){ should include("Version 7.3, 54 syntaxes supported") }
 
+  it "tries to guess the syntax if argument is not provided" do
+    code = %{var foo = function(){ return "bar"; };}
+    highlighted = %{<span class="keyword">var</span> foo = <span class="keyword">function</span>(){ <span class="keyword">return</span> <span class="string">"bar"</span>; };}
+    expect(subject.highlight(code)).to eq(highlighted)
+  end
+
   it "raises an error when syntax is unsupported" do
     broken_hl_call = ->{ subject.highlight "foo", "bar" }
     expected_error = [ HLJS::UnsupportedSyntaxError, "\"bar\" syntax is not supported" ]
