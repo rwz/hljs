@@ -3,7 +3,7 @@ require 'hljs/adapter'
 module HLJS
   module Adapters
     class HighlightJS < Adapter
-      source_file "highlight.js"
+      source_paths "highlight.js"
 
       def highlight(code, lang=nil)
         args = [code]
@@ -19,7 +19,7 @@ module HLJS
       end
 
       def supported_syntaxes
-        @supported_languages ||= context.eval("Object.keys(hljs.LANGUAGES)")
+        super{ context.eval("Object.keys(hljs.LANGUAGES)") }
       end
 
       def version
