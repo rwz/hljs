@@ -5,6 +5,12 @@ It's cooler than Pygments-based solution because it doesn't need python. It's co
 than client-side highlighting because... I have no idea why, actually.
 But anyways.
 
+## Requirements
+
+HLJS requires Ruby 1.9+ mainly because I'm too lazy porting it to 1.8. Also, I don't even remember
+when was the last time I used 1.8 for something other than running specs. Feel free to send
+pull-request if you need 1.8 support.
+
 ## Installation
 
 Add this line to your application's Gemfile:
