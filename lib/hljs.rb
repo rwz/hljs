@@ -14,10 +14,10 @@ module HLJS
 
   def adapter=(new_adapter)
     @adapter = case new_adapter.to_s
-    when /highlight[\s_]?js/i
+    when /\Ahighlight[\s_]?js\z/i
       require "hljs/adapters/highlight_js"
       Adapters::HighlightJS.instance
-    when /syntax[\s_]?highlighter/i
+    when /\Asyntax[\s_]?highlighter\z/i
       require "hljs/adapters/syntax_highlighter"
       Adapters::SyntaxHighlighter.instance
     else
